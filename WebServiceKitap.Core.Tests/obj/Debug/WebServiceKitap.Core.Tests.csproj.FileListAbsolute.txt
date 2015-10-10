@@ -1,0 +1,12 @@
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.Core.Tests.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.Core.Tests.pdb
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.Core.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.DB.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\EntityFramework.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.Core.pdb
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\WebServiceKitap.DB.pdb
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\bin\Debug\EntityFramework.xml
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\obj\Debug\WebServiceKitap.Core.Tests.csprojResolveAssemblyReference.cache
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\obj\Debug\WebServiceKitap.Core.Tests.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core.Tests\obj\Debug\WebServiceKitap.Core.Tests.pdb
