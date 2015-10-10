@@ -1,0 +1,15 @@
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\obj\Debug\WebServiceKitap.Core.csprojResolveAssemblyReference.cache
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\WebServiceKitap.Core.dll.config
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\WebServiceKitap.Core.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\WebServiceKitap.Core.pdb
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\WebServiceKitap.DB.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\WebServiceKitap.DB.pdb
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.xml
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\obj\Debug\WebServiceKitap.Core.dll
+C:\Users\j\Documents\GitHub\WebServiceKitap\WebServiceKitap.Core\obj\Debug\WebServiceKitap.Core.pdb
