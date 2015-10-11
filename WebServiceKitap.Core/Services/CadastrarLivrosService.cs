@@ -51,36 +51,13 @@ namespace WebServiceKitap.Core.Services
 
         private bool VerificarISBN(LivroModel livroModel)
         {
-            /*var mensagemError = new MensagemResposta("error", "");
-            if (livroModel.Isbn.Length < 2)
+            ValidadorDeISBN validadorISBN = new ValidadorDeISBN();
+            foreach(var isbn in livroModel.Isbn)
             {
-                mensagemError.Mensagem = "Porfavor Forneça ao menos um isbn valido.";
-                throw new DadosIvalidoException(mensagemError);
-            }
-                
-
-            ValidadorDeISBN isbn1Validar = new ValidadorDeISBN(livroModel.Isbn[0]);
-            ValidadorDeISBN isbn2Validar = new ValidadorDeISBN(livroModel.Isbn[1]);
-            if (isbn1Validar.Equals("") && isbn2Validar.Equals(""))
-            {
-                mensagemError.Mensagem = "Porfavor Forneça ao menos um isbn valido.";
-                throw new DadosIvalidoException(mensagemError);
-            }
-                
-            else if (!isbn1Validar.Equals("") && !isbn2Validar.Equals(""))
-            {
-                if (!isbn1Validar.Validar() && !isbn2Validar.Validar())
-                {
-                    mensagemError.Mensagem = "Um ou os Dois ISBNs podem está invalidos.";
-                    throw new DadosIvalidoException(mensagemError);
-                }
-                else
-                    return true;
+                validadorISBN.AddISBN(isbn);
             }
 
-            return isbn1Validar.Validar() || isbn2Validar.Validar();;
-            */
-            return true;
+            return validadorISBN.Validar();
         }
     }
 }
