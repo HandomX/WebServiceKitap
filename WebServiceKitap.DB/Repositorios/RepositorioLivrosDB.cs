@@ -9,7 +9,7 @@ using WebServiceKitap.DB.Repositorios.Interfaces;
 
 namespace WebServiceKitap.DB.Repositorios
 {
-    public class RepositorioLivrosDB : IRepositorioLivros
+    public class RepositorioLivrosDB : IRepositorioLivros, IDisposable
     {
         KitapContextDB _KitapDB;
         public RepositorioLivrosDB()
@@ -34,6 +34,11 @@ namespace WebServiceKitap.DB.Repositorios
         {
             var livros = await _KitapDB.Livros.ToListAsync<Livro>();
             return livros;
+        }
+
+        public void Dispose()
+        {
+            _KitapDB.Dispose();
         }
     }
 }
