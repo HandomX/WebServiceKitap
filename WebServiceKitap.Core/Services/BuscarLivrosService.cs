@@ -18,13 +18,10 @@ namespace WebServiceKitap.Core.Services
     public class BuscarLivrosService
     {
         private IRepositorioLivros _RepositorioLivros;
-        private KitapContextDB _KitapDB;
-        private MontadoraDeLivro _MontadorDeLivrosModels;
+        
         public BuscarLivrosService()
         {
-            _RepositorioLivros = new RepositorioLivrosDB();
-            _KitapDB = new KitapContextDB();
-            _MontadorDeLivrosModels = new MontadoraDeLivro();
+            _RepositorioLivros = new RepositorioLivrosDB();            
         }
 
         public async Task<List<LivroModel>> PesquisarTodos()
@@ -32,11 +29,8 @@ namespace WebServiceKitap.Core.Services
             var livros = await _RepositorioLivros.LivrosAll();
             var livroModels = new List<LivroModel>();
 
-            foreach(var livro in livros)
-            {
-               var livroModelAux = _MontadorDeLivrosModels.MontarModeloLivroModel(livro);
-               livroModels.Add(livroModelAux);
-            }
+            foreach (var livro in livros)
+                livroModels.Add(MontarLivroView(livro));
 
             return livroModels;
         }
@@ -46,7 +40,7 @@ namespace WebServiceKitap.Core.Services
             if (_RepositorioLivros.LivroExiste(isbn))
             {
                 var livro = (await _RepositorioLivros.LivrosAll()).Where(l => l.Isbn == isbn).First<Livro>();
-                var livroModel = new LivroModelViewAdaptador(livro).GetLivroModel();
+                var livroModel = MontarLivroView(livro);
 
                 return livroModel;
             }
@@ -65,10 +59,7 @@ namespace WebServiceKitap.Core.Services
             var livroModels = new List<LivroModel>();
 
             foreach (var livro in livros)
-            {
-                var livroModelAux = _MontadorDeLivrosModels.MontarModeloLivroModel(livro);
-                livroModels.Add(livroModelAux);
-            }
+                livroModels.Add(MontarLivroView(livro));
 
             return livroModels;
         }
@@ -79,10 +70,8 @@ namespace WebServiceKitap.Core.Services
             var livroModels = new List<LivroModel>();
 
             foreach (var livro in livros)
-            {
-                var livroModelAux = _MontadorDeLivrosModels.MontarModeloLivroModel(livro);
-                livroModels.Add(livroModelAux);
-            }
+                livroModels.Add(MontarLivroView(livro));
+            
 
             return livroModels;
         }
@@ -93,14 +82,14 @@ namespace WebServiceKitap.Core.Services
             var livroModels = new List<LivroModel>();
 
             foreach (var livro in livros)
-            {
-                var livroModelAux = _MontadorDeLivrosModels.MontarModeloLivroModel(livro);
-                livroModels.Add(livroModelAux);
-            }
+                livroModels.Add(MontarLivroView(livro));
 
             return livroModels;
         }
 
-        
+        private LivroModel MontarLivroView(Livro livro)
+        {
+            return new LivroModelViewAdaptador(livro).GetLivroModel();
+        }
     }
 }

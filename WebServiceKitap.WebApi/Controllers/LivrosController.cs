@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using WebServiceKitap.Core.Helps.Exceptions;
 
 namespace WebServiceKitap.WebApi.Controllers
 {
@@ -63,29 +64,17 @@ namespace WebServiceKitap.WebApi.Controllers
             
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    var mensagemError = new MensagemResposta("error", "Dados Incompletos. Porfavor preencha os campos requeridos.");
-                    throw new DadosIvalidoException(mensagemError);
-                }
-                    
-                
                 var serviceCadastroDeLivros = new CadastrarLivrosService();
                 await serviceCadastroDeLivros.Cadastrar(livro);
+
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, livro);
+                return response;
             } 
-            catch(DadosIvalidoException e)
+            catch(DadosInvalidosException e)
             {
-
                 var resp = Request.CreateResponse(HttpStatusCode.BadRequest, e.ExceptionMessage);
-
                 throw new HttpResponseException(resp);
-            }
-                
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, livro);
-            return response;
-                       
+            }             
         }
     }
-
-    
 }

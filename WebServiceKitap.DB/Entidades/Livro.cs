@@ -13,13 +13,18 @@ namespace WebServiceKitap.DB.Entidades
     {
         [Key]
         public long Id { get; set; }
+
         public string ImagemLink { get; set; }
+
         [Required]
         public string Titulo { get; set; }
+
         [Required]
         public string Autores { get; set; }
+
         [Required]
         public string Editora { get; set; }
+
         [Required]
         [Index("Isbn", IsUnique=true)]
         public string Isbn { get; set; }

@@ -7,21 +7,23 @@ using System.Text;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using WebServiceKitap.DB.Entidades;
+using WebServiceKitap.DB.Repositorios.Interfaces;
+using WebServiceKitap.DB.Repositorios;
 
 namespace WebServiceKitap.Core.Services
 {
     public class BuscarCategoriasService
     {
-        private KitapContextDB _KitapDB;
+        private IRepositorioCategorias _RepositorioCategorias;
 
         public BuscarCategoriasService()
         {
-            this._KitapDB = new KitapContextDB();
+            _RepositorioCategorias = new RepositorioCategoriasDB();
         }
 
         public async Task<List<CategoriaModel>> PesquisarCategorias()
         {
-            var categorias = await _KitapDB.Categorias.ToListAsync();
+            var categorias = await _RepositorioCategorias.CategoriasAll();
 
             var categoriaModels = new List<CategoriaModel>();
 
